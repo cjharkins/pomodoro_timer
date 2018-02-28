@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@keyframes rotation {
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+@keyframes shake {
+  0%{
+    transform: translate(0px,0px);
+  }
+  25%{
+    transform: translate(-1px,-1px);
+  }
+  50%{
+    transform: translate(2px,3px);
+  }
+  75%{
+    transform: translate(3px, 5px);    
+  }
+}
+@keyframes pulse {
+  50% {
+    transform: scale(.93876);
+  }
+}
+
+body {
+  background: rgba(235,235,235,1);
+  background: -moz-linear-gradient(top, rgba(235,235,235,1) 0%, rgba(206,200,228,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(235,235,235,1)), color-stop(100%, rgba(206,200,228,1)));
+  background: -webkit-linear-gradient(top, rgba(235,235,235,1) 0%, rgba(206,200,228,1) 100%);
+  background: -o-linear-gradient(top, rgba(235,235,235,1) 0%, rgba(206,200,228,1) 100%);
+  background: -ms-linear-gradient(top, rgba(235,235,235,1) 0%, rgba(206,200,228,1) 100%);
+  background: linear-gradient(to bottom, rgba(235,235,235,1) 0%, rgba(206,200,228,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#cec8e4', GradientType=0 );
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/************************
+  Card-Container
+************************/
+#card-container {
+  position: relative;
+  margin: 20px auto;
+  border-radius: 3px;
+  width: 400px;
+  height: 700px;
+  background: gray;
+  padding: 50px;
+  background: rgba(23,23,45,1);
+  background: -moz-linear-gradient(top, rgba(23,23,45,1) 0%, rgba(23,23,45,1) 40%, rgba(28,47,54,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(23,23,45,1)), color-stop(40%, rgba(23,23,45,1)), color-stop(100%, rgba(28,47,54,1)));
+  background: -webkit-linear-gradient(top, rgba(23,23,45,1) 0%, rgba(23,23,45,1) 40%, rgba(28,47,54,1) 100%);
+  background: -o-linear-gradient(top, rgba(23,23,45,1) 0%, rgba(23,23,45,1) 40%, rgba(28,47,54,1) 100%);
+  background: -ms-linear-gradient(top, rgba(23,23,45,1) 0%, rgba(23,23,45,1) 40%, rgba(28,47,54,1) 100%);
+  background: linear-gradient(to bottom, rgba(23,23,45,1) 0%, rgba(23,23,45,1) 40%, rgba(28,47,54,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17172d', endColorstr='#1c2f36', GradientType=0 );
+  -webkit-box-shadow: 0px 10px 49px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 49px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 49px 1px rgba(0,0,0,0.75);
+}
+
+/***********************
+  SVG Main-Animation
+***********************/
+.st0{fill:#17172D;}
+.st1{fill:#FEFEFF;}
+.st2{fill:#DFE675;}
+.st3{fill:#70C8BB;}
+.st4{fill:#7F7F7F;}
+.st5{fill:#545554;}
+.st6{fill:#EE709C;}
+.st7{fill:#FEFEFF;stroke:#FEFEFF;stroke-miterlimit:10;}
+.st8{fill:#231F20;}
+.st9{fill:#4D6EB5;}
+.st10{fill:#FFFFFF;}
+.st11{opacity:0.55;fill:#FFFFFF;}
+.st12{fill:#BFBBB6;}
+.st13{fill:#D81F27;}
+.st14{fill:#7C5222;}
+.st15{fill:#272828;}
+.st16{fill:#EF8B8B;}
+.st17{fill:#FEFFFF;}
+.st18{fill:#DBC197;}
+.st19{fill:none;stroke:#FEFEFF;stroke-miterlimit:10;}
+.st20{fill:none;}
+.st21{fill:#D9DBDD;}
+.st22{fill:#E8674D;}
+.st23{fill:#6767A4;}
+
+#svg-wrapper {
+  padding: 0;
+  margin: 0px auto;
+  width: 360px;
+  border-radius: 280px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 10px 49px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 10px 49px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 10px 49px 1px rgba(0,0,0,0.5);
+}
+
+/*********************
+  Progress-bar
+*********************/
+#progress-container {
+  position: relative;
+  width: 400px;
+  top: -360px;
+  left: 0px;
+}
+#progress-line {
+  width: 100%;
+  stroke:white;
+  stroke-width: 5px;
+  stroke-miterlimit:10;
+  fill: none;
+}
+
+/********************
+  Buttons
+********************/
+.btn {
+  border: none;
+  background: none;
+  padding: 0px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+}
+.btn:active {
+  -webkit-box-shadow: inset 0px 10px 49px 1px rgba(200,200,200,.05),
+                            0px 10px 49px 1px rgba(200,200,200,.15);
+  -moz-box-shadow: inset 0px 10px 49px 1px rgba(200,200,200,.05),
+                         0px 10px 49px 1px rgba(200,200,200,.15);
+  box-shadow: inset 0px 10px 49px 1px rgba(200,200,200,.05),
+                    0px 10px 49px 1px rgba(200,200,200,.15);
+}
+button:focus {
+  outline: 0px;
+}
+input {
+  border: none;
+  background: none;
+}
+#start {
+  position: absolute;
+  top: 650px;
+  left: 200px;
+}
+#stop {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 665px;
+  left: 210px;
+}
+#play {
+  margin-left: 3px;
+  width: 100%;
+}
+#inc, #dec {
+  width: 40px;
+  height: 40px;
+}
+#inc,
+#dec {
+  position: absolute;
+  top: 700px;
+}
+#dec {
+  left: 125px;
+}
+.svg-add,
+.svg-sub {
+  stroke-width: 3px;
+  stroke-miterlimit: 10;
+  stroke: #E8674D;
+}
+.svg-play,
+.svg-pause,
+.svg-replay {
+  fill: #fff;
+}
+#divider {
+  width: 125px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 698px;
+}
+#interval-container {
+  position: absolute;
+  top: 640px;
+  left: 55px;
+}
+#work,
+#break {
+  width: 35px;
+  height: 25px;
+  border-radius: 0;
+  display: inline-block;
+  margin-right: 35px;
+  color: gray;
+}
+.selected {
+  color: #70C8BB;
+}
+#toggle {
+  width: 65px;
+  height:1px;
+  background: #E8674D;
+}
+
+#pomodoros {
+  position: absolute;
+  top: 625px;
+  right: 50px;
+  color: white;
+  font-size: 1.4em;
+}
+#time {
+  position: absolute;
+  top: 630px;
+  left: 50px;
+}
+#display_work,
+#display_break {
+  width: 75px;
+  font-size: 1.3em;
+}
+
+#display_time {
+  font-size: 4.3em;
+  position: absolute;
+  top: 470px;
+  left: 150px;
+}
+
+#music {
+  position: absolute;
+  top: 750px;
+  right: 50px;
+  color: white;
+}
+a {
+  color: white;
+}
